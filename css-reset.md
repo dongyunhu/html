@@ -19,12 +19,11 @@
       height:100%; 
     }
     
-    h2,h3{
-      font-weight:bold;
-    }
+    h2,h3{ font-weight:bold;}
+    
     a, a:link, a:visited, a:hover, a:active{
-        text-decoration:none
-    }
+        text-decoration:none;
+	}
     
     ul,ul li{list-style:none;}
     
