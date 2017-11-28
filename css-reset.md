@@ -10,9 +10,9 @@
         border:none;
     }
     
-    html, body { 
-      font-size: 12px; //全局默认文字大小
-      font-family: "Arial", "microsoft yahei"; 
+    html, body {
+      font-size: 12px; //全局默认文字大小
+      font-family: "Arial", "microsoft yahei";
       color: #333;
       background-color:#fff;
       width:100%;
@@ -21,14 +21,13 @@
     
     h2,h3{
       font-weight:bold;
-    }
-    
-    ul,ul li{list-style:none;}
-    
+    }
     a, a:link, a:visited, a:hover, a:active{
         text-decoration:none
-    }    
-			
+    }
+    
+    ul,ul li{list-style:none;}
+    
     .clearfix:after{
       content: " ";
       display: block;
