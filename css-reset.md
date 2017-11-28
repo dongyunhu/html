@@ -11,12 +11,10 @@
     }
     
     html, body { 
-      font-size: 14px; 
-      font-family: "Arial", "microsoft yahei"; 
-      font-weight: normal; 
+      font-size: 12px; //全局默认文字大小
+      font-family: "Arial", "microsoft yahei"; 
       color: #333;
       background-color:#fff;
-      min-width:1000px;
       width:100%;
       height:100%; 
     }
@@ -25,6 +23,21 @@
       font-weight:bold;
     }
     
-    ul,ul li{list-style:none;}
+    ul,ul li{list-style:none;}
     
-    a,a:hover{text-decoration:none;}
+    a, a:link, a:visited, a:hover, a:active{
+        text-decoration:none
+    }    
+			
+    .clearfix:after{
+      content: " ";
+      display: block;
+      clear: both;
+      height: 0;
+    }
+    .clearfix{
+      zoom: 1;
+    }
+
+		
+ 
