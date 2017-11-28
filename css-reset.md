@@ -1,5 +1,14 @@
 ### css 重置 ###
-  
+	@charset "utf-8";  
+	/*  
+	  Document   : CSS样式初始化  
+	  Created on : 2016. 8. 7,09:41:00  
+	  Author :  
+	  Description:  
+	  CSS样式表的初始化，全局样式设置。部分样式属性请根据具体页面重置其属性  
+	      导入方式：<link href="css/common.css" rel="stylesheet" type="text/css" /> */  
+	/* reset */  
+	
     * {
         font-family: "Arial", "microsoft yahei"; 
         margin: 0; 
@@ -22,8 +31,8 @@
     h2,h3{ font-weight:bold;}
     
     a, a:link, a:visited, a:hover, a:active{
-        text-decoration:none;
-	}
+        text-decoration:none;
+    }
     
     ul,ul li{list-style:none;}
     
