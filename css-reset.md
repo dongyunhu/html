@@ -36,7 +36,7 @@
     
     ul,ul li{list-style:none;}
     /*清除浮动*/
-    .clearfix:after{
+    .clearfix:after{
       content: " ";
       display: block;
       clear: both;
