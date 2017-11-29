@@ -2,7 +2,7 @@
 
 * 三角形（实心）
 
-      /*向上*/
+      		/*向上*/
 		#triangle-up {
 		    width: 0;
 		    height: 0;
@@ -43,5 +43,23 @@
 		}
 
 * 方向箭头
-    
+    	
+		/*向右*/
+		 #demo1{
+		  position: relative;
+		}
+		#demo1:after, #demo16:before {
+		  border: 10px solid transparent;
+		  border-left: 10px solid #fff;
+		  width: 0;
+		  height: 0;
+		  position: absolute;
+		  top: 0;
+		  right: -20px;
+		  content: ' '
+		}
+		#demo1:before {
+		  border-left-color: #f00;
+		  right: -21px;
+		}
       
