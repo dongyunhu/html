@@ -20,8 +20,8 @@
     }
     
     html, body {
-      font-size: 12px; //全局默认文字大小
-      font-family: "Arial", "microsoft yahei";
+      font-size: 12px; /*全局默认文字大小*/
+      font-family: "Arial", "microsoft yahei";
       color: #333;
       background-color:#fff;
       width:100%;
@@ -35,8 +35,8 @@
     }
     
     ul,ul li{list-style:none;}
-    
-    .clearfix:after{
+    /*清除浮动*/
+    .clearfix:after{
       content: " ";
       display: block;
       clear: both;
@@ -45,6 +45,18 @@
     .clearfix{
       zoom: 1;
     }
+     /* 重置表单控件垂直居中*/ 
+    input,select,textarea,button {
+   	 vertical-align:middle
+    } 
+    /* 重置table属性 */
+    table {
+      width:100%;
+      border-collapse:collapse;
+      border-spacing:0;
+      table-layout:fixed;
+    }    
+    
 
 		
  
