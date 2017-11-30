@@ -20,12 +20,13 @@
     }
     
     html, body {
-      font-size: 12px; /*全局默认文字大小*/
-      font-family: "Arial", "microsoft yahei";
+      /*全局默认文字大小*/
+      font-size: 12px;
+      font-family: "Arial", "microsoft yahei";
       color: #333;
       background-color:#fff;
       width:100%;
-      height:100%; 
+      height:100%;
     }
     
     h2,h3{ font-weight:bold;}
@@ -34,8 +35,9 @@
         text-decoration:none;
     }
     
-    ul,ul li{list-style:none;}
-    /*清除浮动*/
+    ul,ul li{ list-style:none; }
+    
+    /*清除浮动*/
     .clearfix:after{
       content: " ";
       display: block;
