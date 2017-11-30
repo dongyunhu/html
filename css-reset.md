@@ -47,18 +47,17 @@
     .clearfix{
       zoom: 1;
     }
-     /* 重置表单控件垂直居中*/ 
+    /* 重置表单控件垂直居中*/ 
     input,select,textarea,button {
-   	 vertical-align:middle
-    } 
+    	vertical-align:middle;
+    }
     /* 重置table属性 */
     table {
-      width:100%;
-      border-collapse:collapse;
-      border-spacing:0;
-      table-layout:fixed;
-    }    
-    
-
-		
- 
+    	width:100%;
+        border-collapse:collapse;
+        border-spacing:0;
+        table-layout:fixed;
+    }
+    	
+     
+   	 
