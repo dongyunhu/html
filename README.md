@@ -11,3 +11,7 @@
 
     </body>
     </html>
+
+image 占位图片
+
+    http://via.placeholder.com/130x50
