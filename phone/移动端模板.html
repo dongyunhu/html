@@ -1,0 +1,703 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--申明当前页面的编码集-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--网页标题-->
+    <title>HTML5移动端开发模板</title>
+    <!--网页关键词-->
+    <meta name="keywords" content="" />
+    <!--网页描述-->
+    <meta name="description" content="" />
+    <!--适配当前屏幕-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!--禁止自动识别电话号码-->
+    <meta name="format-detection" content="telephone=no" />
+    <!--禁止自动识别邮箱-->
+    <meta content="email=no" name="format-detection" />
+    <!--iphone中safari私有meta标签,
+        允许全屏模式浏览,隐藏浏览器导航栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--iphone中safari顶端的状态条的样式black(黑色)-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="" id="link-url">
+    <script type="text/javascript">
+        function cssChange(a){
+            // var link = document.getElementsByTagName('link')[3];
+            var link = document.getElementById('link-url');
+
+            link.setAttribute('href',a);
+            // alert('当前应用样式文件是：'+link.getAttribute('href'));
+
+        }
+        //懒人建站http://www.51xuediannao.com/
+        if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        //    alert('手机端');
+            cssChange("css/mobile.css");
+        }else{
+        //    alert('pc端');
+           cssChange("css/pc.css");
+        }
+    </script>
+
+    <style type="text/css">
+
+    /* a, img {
+    /* 禁止长按链接与图片弹出菜单 */
+    /* -webkit-touch-callout: none; */
+
+    /* } */
+    /*public*/
+
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+* {
+	margin:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box
+}
+html {
+    font-family:sans-serif;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    font-size: .32rem;
+}
+
+body,html {
+	width:100%;
+	height:100%;
+	min-height:100%;
+	line-height:1;
+}
+body {
+	-webkit-tap-highlight-color:transparent;
+    font-size: .32rem;
+    /*注意： .32rem  iphone6/7/8 = 12px ; plus+1 = 13px; 不同浏览器渲染为默认尺寸  */
+}
+
+/* 著作权归作者所有。
+商业转载请联系作者获得授权,非商业转载请注明出处。
+链接:http://caibaojian.com/flexible-js.html
+来源:http://caibaojian.com */
+
+/* Flexible会将视觉稿分成100份（主要为了以后能更好的兼容vh和vw），而每一份被称为一个单位a。
+同时1rem单位被认定为10a。针对我们这份视觉稿可以计算出：
+(设计稿为750px 6/7/8 的 *双倍* 比为例）
+1a   = 7.5px
+1rem = 75px
+75px * 0.32 = 24px
+（比例双倍设计 / 2  = 实际需要尺寸）
+24 / 2 = 12px
+*/
+/*求字体大小值 24 / 75 = 0.32rem
+
+  12px   0.32rem
+  13px   0.347rem
+  14px   0.373rem
+  16px   0.427rem
+  18px   0.48rem
+  20px   0.533rem
+  22px   0.587rem
+  24px   0.64rem
+  26px   0.693rem
+  32px   0.853rem
+  36px   0.96rem
+*/
+
+*,body {
+	padding:0
+}
+
+.text {
+    font-size: 0.32rem;
+}
+.text1 {
+    font-size: 12px;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
+	display:block
+}
+audio,canvas,progress,video {
+	display:inline-block;
+	vertical-align:baseline
+}
+audio:not([controls]) {
+	display:none;
+	height:0
+}
+[hidden],template {
+	display:none
+}
+a {
+	background-color:transparent;
+    text-decoration: none;
+}
+a:active,a:hover {
+	outline:0
+}
+
+abbr[title] {
+	border-bottom:.013333rem dotted
+}
+b,strong {
+	font-weight:700
+}
+dfn {
+	font-style:italic
+}
+h1 {
+	font-size:2em;
+	margin:.67em 0
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:400
+}
+mark {
+	background:#ff0;
+	color:#000
+}
+small {
+	font-size:80%
+}
+sub,sup {
+	font-size:75%;
+	line-height:0;
+	position:relative;
+	vertical-align:baseline
+}
+sup {
+	top:-.5em
+}
+sub {
+	bottom:-.25em
+}
+img {
+	border:0
+}
+svg:not(:root) {
+	overflow:hidden
+}
+figure {
+	margin:1em .533333rem
+}
+hr {
+	box-sizing:content-box;
+	height:0
+}
+pre {
+	overflow:auto
+}
+code,kbd,pre,samp {
+	font-family:monospace,monospace;
+	font-size:1em
+}
+
+.clear{zoom:1;}
+.clear:after{content:''; display:block; clear:both;}
+
+button,input,optgroup,select,textarea {
+	color:inherit;
+	font:inherit;
+	margin:0
+}
+button {
+	overflow:visible
+}
+button,select {
+	text-transform:none
+}
+button,html input[type=button],input[type=reset],input[type=submit] {
+	-webkit-appearance:button;
+	cursor:pointer
+}
+button[disabled],html input[disabled] {
+	cursor:default
+}
+button::-moz-focus-inner,input::-moz-focus-inner {
+	border:0;
+	padding:0
+}
+input {
+	line-height:normal
+}
+input[type=checkbox],input[type=radio] {
+	box-sizing:border-box;
+	padding:0
+}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+	height:auto
+}
+input[type=search] {
+	-webkit-appearance:textfield;
+	box-sizing:content-box
+}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration {
+	-webkit-appearance:none
+}
+fieldset {
+	border:.013333rem solid silver;
+	margin:0 .026667rem;
+	padding:.35em .625em .75em
+}
+legend {
+	border:0;
+	padding:0
+}
+textarea {
+	overflow:auto
+}
+optgroup {
+	font-weight:700
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+td,th {
+	padding:0
+}
+
+li {
+	list-style:none
+}
+.hide {
+	display:none;
+}
+.show {
+	display:block;
+}
+button,input,textarea {
+	outline:0
+}
+.pull-left {
+	float:left
+}
+.pull-right {
+	float:right
+}
+
+.border-bottom:after,.border-right:after,.border-top:before {
+	content:" ";
+	display:block;
+	border-top:1px solid #dcdcdc;
+	position:absolute;
+	left:0;
+	right:0
+}
+.border-right:after {
+	border-top:none;
+	border-right:1px solid #dcdcdc;
+	top:0;
+	bottom:0;
+	right:0;
+	left:auto
+}
+.border-bottom,.border-right,.border-top {
+	position:relative
+}
+.border-top:before {
+	top:0
+}
+.border-bottom:after {
+	bottom:0
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.border-bottom:after,.border-top:before {
+	-webkit-transform:scaleY(.7);
+	transform:scaleY(.7);
+	-webkit-transform-origin:left bottom;
+	transform-origin:left bottom
+}
+.border-top:before {
+	-webkit-transform-origin:left top;
+	transform-origin:left top
+}
+.border-right:after {
+	-webkit-transform:scaleX(.7);
+	transform:scaleX(.7);
+	-webkit-transform-origin:right top;
+	transform-origin:right top
+}
+}@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.border-bottom:after,.border-top:before {
+	-webkit-transform:scaleY(.5);
+	transform:scaleY(.5)
+}
+.border-right:after {
+	-webkit-transform:scaleX(.5);
+	transform:scaleX(.5)
+}
+}
+.text-ellipse {
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden
+}
+.text-break {
+	word-wrap:break-word;
+	word-break:break-all
+}
+
+.texta {
+    display: none;
+}
+
+/********各个不同尺寸的媒体查询条件
+/4 4s/
+/* @media only screen and (device-height :480px) and (-webkit-device-pixel-ratio:2){ } */
+/* @media screen and (min-width: 320px) and (max-width: 480px) { } */
+
+/* 兼容iphone5 */
+ /* @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){} */
+
+/*6/7/8*/
+/* iphoneX 375*812 */
+/* @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){ } */
+
+/*6/7/8+*/
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+    .text{
+        color:#df0000;
+    }
+    .texta {
+        font-size: 30px;
+        display: block;
+    }
+}
+
+/*魅族*/
+/* @media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 2.5){ } */
+
+/*mate7*/
+/* @media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 3){ } */
+
+/* 平板之类的宽度 1024 以下设备 */
+/* @media only screen and (min-width: 321px) and (max-width: 1024px) { body { background: blue; } } */
+
+/* PC客户端或大屏幕设备: 1028px 至更大 */
+/* @media only screen and (min-width: 1029px) { body { background: green; } } */
+
+/* 竖屏 */
+/* @media screen and (orientation:portrait) and (max-width: 720px) {对应样式} */
+
+/* 横屏 */
+ /* @media screen and (orientation:landscape){对应样式} */
+
+
+ /* 动画弹出框 */
+
+ #dialogBg{
+     width:100%;
+     height:100%;
+     background-color:#000000;
+     opacity:.6;
+     filter:alpha(opacity=60);
+     position:fixed;
+     top:0;
+     left:0;
+     z-index:9999;
+     display:none;
+}
+ .animated{
+	-webkit-animation-duration:1.4s;
+	animation-duration:1.4s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both
+}
+
+@-webkit-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* 60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  } */
+
+  80% {
+       opacity: 1;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+#dialog {
+    width: 300px;
+    height: 240px;
+    margin: 0 auto;
+    display: none;
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -150px;
+    z-index: 10000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 3px 2px 4px #ccc;
+    -webkit-box-shadow: 3px 2px 4px #ccc;
+}
+
+@-webkit-keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+@keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* 20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  } */
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+
+/* 图片要标准的 16：9 尺寸的，只设宽度100%；不要高度，自适应大小 */
+.img-bg {
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <img src="img-bg.jpg" class="img-bg" alt="">
+    <div class="top-position">
+        <div class="text">0.32rem文字大小</div>
+        <div class="texta">我是媒体查询plus显示</div>
+        <div class="text1">12px文字大小</div>
+        <div style="font-size: 0.427rem;">这是16px文字</div>
+        <a href="">链接</a>
+        <div>这是一个移动端开发模板哟!</div>
+        <h2>这是一个移动端开发模板哟!</h2>
+        <div style="height: 50px;" class="border-top">
+            细线盒子边框上
+        </div>
+        <div style="height: 50px;" class="border-top">
+                细线盒子边框上
+            </div>
+        <div style="height: 50px;" class="border-bottom">
+            细线盒子边框下
+        </div>
+
+        <button class="btn-modal">动画弹出框</button>
+        <div id="dialogBg"></div>
+        <div id="dialog" class="animated">
+            <img class="dialogIco" width="50" height="50" src="images/ico.png" alt="">
+            <div class="dialogTop">
+                <a href="javascript:;" class="claseDialogBtn">关闭</a>
+            </div>
+            <form action="" method="post" id="editForm">
+                <ul class="editInfos">
+                    <!-- <li><label><font color="#ff0000">* </font>昵称：<input type="text" name="" required="" value="" class="ipt"></label></li> -->
+                    <li><label><font color="#ff0000">* </font>验证手机号：<input type="text" class="input-in" name="" required="" value="" class="ipt"></label></li>
+                    <!-- <li><label><font color="#ff0000">* </font>地址：<input type="text" name="" required="" value="" class="ipt"></label></li> -->
+                    <li><div class="div-txt"></div></li>
+                    <li><input type="submit" value="确认提交验证" class="submitBtn"></li>
+                </ul>
+            </form>
+        </div>
+        <button class="getbtn">点击请求</button>
+        <textarea id="text" style="width: 400px; height: 100px;"></textarea>
+         <ul>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+            <li style="height: 150px;">文字</li>
+         </ul>
+
+    </div>
+    <div class="js-top-btn" style="position: fixed; bottom: 100px; right: 20px; width: 30px; height: 30px; background:#0083df; display:none;">
+        点击置顶
+    </div>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+             //一键置顶
+            $(document).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 200) {
+                    $(".js-top-btn").fadeIn(200);
+                } else {
+                    $(".js-top-btn").fadeOut(200);
+                }
+            });
+
+            $(".js-top-btn").click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 300);
+            });
+
+            // 模态框
+                var w,h;
+                function getSrceenWH(){
+                    w = $(window).width();
+                    h = $(window).height();
+                    $('#dialogBg').width(w).height(h);
+                }
+
+                window.onresize = function(){
+                    getSrceenWH();
+                }
+                $(window).resize();
+
+                    // 验证手机号
+                    function isPhoneNo(phone) {
+                        var pattern = /^1[34578]\d{9}$/;
+                        return pattern.test(phone);
+                    }
+                $(function(){
+
+                    getSrceenWH();
+
+                    //验证手机号
+
+                    //显示弹框
+                    $('.btn-modal').click(function(){
+                        // className = $(this).attr('class');
+                        $('#dialogBg').fadeIn(300);
+                        $('#dialog').removeAttr('class').addClass('animated bounceInDown').fadeIn();
+
+                        $(".input-in").on('keyup change', function(e) {
+                            var inputTxt = $(e.target).val();
+
+                            $(".div-txt").html(inputTxt);
+
+
+
+                        });
+
+                        $(".submitBtn").click(function(){
+                            var inputTxt = $(".input-in").val();
+                            var flag = false;
+                            var message = "";
+                            var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                            if(inputTxt == ''){
+                                message = "手机号码不能为空！";
+                                alert(message);
+                            }else if(inputTxt.length !=11){
+                                message = "请输入有效的手机号码！";
+                                alert(message);
+                            }else if(!myreg.test(inputTxt)){
+                                message = "请输入有效的手机号码！";
+                                alert(message);
+                            }else if(checkPhoneIsExist()){
+                                message = "该手机号码已经被绑定！";
+                                alert(message);
+                            }else{
+                                flag = true;
+                            }
+
+                            if(!flag){
+                                // 错误
+                            }else{
+                                // 正确
+                            }
+                            return flag;
+                        });
+
+                    });
+
+
+
+                    //关闭弹窗
+                    $('.claseDialogBtn').click(function(){
+                        $('#dialogBg').fadeOut(200,function(){
+                            $('#dialog').addClass('bounceOutUp').fadeOut();
+                        });
+                    });
+                });
+
+        });
+
+    </script>
+
+</body>
+</html>
